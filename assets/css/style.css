@@ -1,0 +1,905 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    border-radius: 0;
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(22, 24, 35, 0.2);
+}
+
+::-webkit-scrollbar-thumb: hover {
+    background-color: ;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: "Sora", sans-serif;
+}
+
+:root {
+    --primary-color: #10375c;
+}
+
+/*  common */
+
+a {
+    text-decoration: none;
+}
+
+.btn {
+    display: inline-block;
+    min-width: 104px;
+    color: #fff;
+    font-size: 1.8rem;
+    line-height: 60px;
+    background: #2e80ce;
+    border-radius: 22px;
+    text-align: center;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.main-content {
+    width: 1170px;
+    max-width: calc(100% - 48px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Header */
+
+.header {
+    padding-top: 18px;
+    background: var(--primary-color);
+    position: sticky;
+    top: -18px;
+    z-index: 10;
+}
+
+.header__navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0;
+}
+
+.header__logo {
+    display: flex;
+    align-items: center;
+    margin-right: 304px;
+}
+
+.header__logo-image {
+    border-radius: 50%;
+    margin-right: 6px;
+}
+
+.header__title a {
+    width: 50px;
+    height: 31px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 1.16;
+}
+
+.header__title strong {
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 0.77;
+}
+
+.header__list-item {
+    display: flex;
+    gap: 42px;
+    margin-right: 222px;
+}
+
+.header__item a {
+    position: relative;
+    color: #c9d2da;
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 1.75;
+}
+
+.header__item a:hover,
+.header__item.header__item--active a {
+    text-shadow: 1px 0 0 #fff;
+}
+
+.header__item--active a::before {
+    position: absolute;
+    bottom: 7px;
+    left: -12px;
+    content: " ";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.header__action {
+    display: flex;
+    align-items: center;
+}
+
+.header__action-btn {
+    color: #c9d2da;
+    font-size: 1.6rem;
+    font-weight: 300;
+    margin-right: 28px;
+}
+
+.header__btn {
+    width: 104px;
+    line-height: 44px;
+    color: #fff;
+}
+
+.header__btn {
+    width: 104px;
+    line-height: 44px;
+}
+
+/* hero */
+
+.hero {
+    padding: 76px 0 110px;
+
+    background: var(--primary-color);
+}
+
+.hero__section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero__article {
+    width: 517px;
+    height: 420px;
+}
+
+.hero__title {
+    color: #fff;
+    font-size: 7rem;
+    font-weight: 600;
+    line-height: 1.14;
+    letter-spacing: -1.4px;
+}
+
+.hero__sub-title {
+    color: #c9d2da;
+    margin-top: 22px;
+    font-size: 1.8rem;
+    font-weight: 300;
+    line-height: 1.667;
+}
+
+.hero__contact {
+    margin-top: 38px;
+}
+
+.hero__btn {
+    width: 205px;
+    line-height: 60px;
+    border-radius: 30px;
+    margin-right: 38px;
+}
+
+.hero__phone {
+    color: #fff;
+    font-size: 1.8rem;
+    line-height: 1.667;
+}
+
+.hero__image-block {
+    position: relative;
+    align-items: center;
+    display: flex;
+    width: 534px;
+    height: 540px;
+}
+
+.hero__image:first-child {
+    z-index: 1;
+    width: 330px;
+    height: 540px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.hero__image:nth-child(2) {
+    position: absolute;
+    right: 6px;
+    width: 210px;
+    height: 410px;
+    object-fit: cover;
+    border-radius: 0px 6px 6px 0px;
+}
+
+/* services */
+
+.services {
+    margin: 170px 0;
+}
+
+.services__title {
+    color: var(--primary-color);
+    font-size: 5rem;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -1px;
+    margin-left: auto;
+    text-align: center;
+}
+
+.services__sub-title {
+    margin-top: 18px;
+    width: 468px;
+    color: #575f66;
+    font-size: 1.8rem;
+    font-weight: 300;
+    line-height: 1.667;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.services__content {
+    margin-top: 70px;
+    display: flex;
+    align-items: center;
+}
+
+.services__image {
+    width: 570px;
+    height: 570px;
+    border-radius: 12px;
+}
+
+.services__detail {
+    margin-left: 130px;
+}
+
+.services__list {
+    display: flex;
+    width: 470px;
+    height: 128px;
+}
+
+.services__list:hover {
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0px 14px 28px 0px rgba(0, 0, 0, 0.05);
+}
+
+.services__list--item {
+    margin-left: 10px;
+}
+
+.services__tooth {
+    margin-top: 15px;
+    color: #10375c;
+}
+
+.services__tooth g {
+    color: #eff6fd;
+}
+
+.services__list:hover .services__tooth g {
+    color: #2e80ce;
+}
+
+.services__list:hover .services__tooth {
+    color: #fff;
+}
+
+.services__list--title {
+    margin-top: 21px;
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.services__list--desc {
+    margin-top: 8px;
+    color: #575f66;
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 1.75;
+}
+
+.services__btn {
+    margin-top: 55px;
+    width: 205px;
+    border-radius: 30px;
+}
+
+/* works*/
+
+.works {
+    background: #f6fbff;
+    padding: 100px 0;
+}
+
+.works__title {
+    color: var(--primary-color);
+    font-size: 5rem;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -1px;
+}
+
+.works__desc {
+    margin-top: 18px;
+    width: 468px;
+    color: #575f66;
+    font-size: 1.8rem;
+    font-weight: 300;
+    line-height: 1.667;
+}
+
+.works__doctor {
+    margin-top: 86px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.works__doctor--list {
+    padding: 42px 43px;
+    background: #fff;
+    border: 16px solid #eaf6ff;
+    border-radius: 4px;
+}
+
+.works__doctor--list:hover {
+    border: 16px solid #2e80ce;
+    margin: -16px 0 16px;
+}
+
+.works__doctor--title {
+    margin-top: 18px;
+    color: var(--primary-color);
+    font-size: 2.6rem;
+    font-weight: 600;
+    line-height: 1.38;
+}
+
+.works__doctor--desc {
+    margin-top: 28px;
+    color: #575f66;
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 1.75;
+}
+
+.works__doctor--action {
+    display: inline-block;
+    margin-top: 18px;
+    color: #575f66;
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 1.75;
+}
+
+/* care */
+
+.care {
+    margin: 170px 0;
+}
+
+.care__shine {
+    display: flex;
+    height: 491px;
+}
+
+.smile__image-block {
+    position: relative;
+}
+
+.care__image-block--image:nth-of-type(1) {
+    display: block;
+    width: 512px;
+    height: 370px;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+.care__image-block--image:nth-of-type(2) {
+    position: absolute;
+    top: 121px;
+    right: -58px;
+    width: 332px;
+    height: 370px;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+.care__content {
+    margin-left: 188px;
+    align-self: center;
+}
+
+.care__title {
+    color: var(--primary-color);
+    font-size: 5rem;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -1px;
+}
+
+.care__desc {
+    margin-top: 18px;
+    color: #575f66;
+    font-size: 1.8rem;
+    font-weight: 300;
+    line-height: 1.667;
+}
+
+.care__btn {
+    margin-top: 38px;
+    width: 205px;
+    border-radius: 30px;
+}
+
+/* dentist */
+
+.dentist__title {
+    color: var(--primary-color);
+    text-align: center;
+    font-size: 5rem;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -1px;
+}
+
+.dentist__btn {
+    margin-top: 38px;
+    display: block;
+    width: 205px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 30px;
+}
+
+.dentist__list {
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.dentist__image {
+    border-radius: 6px;
+    padding-top: 28px;
+    background: #eaf6ff;
+    width: 270px;
+    height: 318px;
+}
+
+.dentist__img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    object-fit: cover;
+    border-radius: 6px;
+    background: #eaf6ff;
+}
+
+.dentist__img:nth-child(1) {
+    width: 262px;
+    height: 290px;
+}
+
+.dentist__img:nth-child(2) {
+    width: 270px;
+    height: 290px;
+}
+
+.dentist__img:nth-child(3) {
+    width: 292px;
+    height: 305px;
+}
+
+.dentist__img:nth-child(4) {
+    width: 253px;
+    height: 290px;
+}
+
+.dentist__name a {
+    display: block;
+    text-align: center;
+    margin-top: 12px;
+    color: var(--primary-color);
+    text-align: center;
+    font-size: 1.6rem;
+    line-height: 1.75;
+}
+
+.dentist__info {
+    color: #575f66;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 300;
+    line-height: 1.857;
+}
+
+.dentist__controls {
+    margin-top: 38px;
+    justify-content: center;
+    gap: 18px;
+    display: flex;
+}
+
+.dentist__control-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border: 1px solid #575f66;
+    background-color: #fff;
+    color: #575f66;
+    border-radius: 50%;
+}
+
+.dentist__control-btn:hover {
+    color: #fff;
+    background-color: #2e80ce;
+    border: 1px solid #2e80ce;
+}
+
+/* dentures */
+
+.dentures {
+    margin: 265px 0 170px 0;
+}
+
+.dentures__application {
+    position: relative;
+    height: 427px;
+    border-radius: 4px;
+    background: #2e80ce;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.dentures__title {
+    margin-left: 514px;
+    width: 489px;
+    color: #fff;
+    font-size: 5rem;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -1px;
+}
+
+.dentures__desc {
+    margin-left: 514px;
+    width: 586px;
+    margin-top: 18px;
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 300;
+    line-height: 1.667;
+}
+
+.dentures__link {
+    margin: 38px 0 0 514px;
+}
+
+.dentures__link--image:first-child {
+    margin-right: 28px;
+}
+
+.dentures__image {
+    position: absolute;
+    bottom: 0;
+    left: 70px;
+}
+
+/* blog */
+
+.blog {
+    background-color: #fff;
+}
+
+.blog__title {
+    width: 470px;
+    color: var(--primary-color);
+    font-size: 5rem;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -1px;
+}
+
+.blog__btn {
+    display: inline-block;
+    margin-top: 28px;
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.55;
+    text-decoration-line: underline;
+}
+
+.blog__news {
+    display: flex;
+    align-items: center;
+}
+
+.blog__controls {
+    margin-top: 18px;
+    display: flex;
+}
+
+.blog__controls--control {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid #575f66;
+    background-color: #fff;
+}
+
+.blog__controls--control:first-child {
+    margin-right: 18px;
+}
+
+.blog__controls--control:hover {
+    color: #fff;
+    background-color: #2e80ce;
+    border-color: #2e80ce;
+}
+
+.blog__list {
+    margin-left: 130px;
+    display: flex;
+    gap: 30px;
+}
+
+.blog__item {
+    width: 270px;
+    height: 375px;
+    border-radius: 12px;
+    border: 1px solid #e8ebee;
+    background: #fff;
+}
+
+.blog__item:hover {
+    box-shadow: 0px 18px 50px 0px rgba(0, 0, 0, 0.05);
+    border: 1px solid transparent;
+}
+
+.blog__item:hover .blog__list--btn {
+    color: #2e80ce;
+}
+
+.blog__item--content {
+    margin: 18px 24px 21px 22px;
+}
+
+.blog__list--image {
+    margin: -1px;
+    width: calc(100% + 2px);
+    height: 172px;
+    object-fit: cover;
+    border-radius: 12px 12px 0px 0px;
+}
+
+.blog__list--title a {
+    color: var(--primary-color);
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1.625;
+}
+
+.blog__list--desc {
+    margin-top: 10px;
+    color: #575f66;
+    font-size: 1.4rem;
+    font-weight: 300;
+    line-height: 1.71;
+}
+
+.blog__list--btn {
+    display: inline-block;
+    margin-top: 10px;
+    color: var(--primary-color);
+    font-size: 1.4rem;
+    line-height: normal;
+}
+
+/* patient */
+
+.patient {
+    margin: 170px 0;
+}
+
+.patient__content {
+    background: #f6fbff;
+    padding: 100px 0;
+}
+
+.patient__title {
+    color: #10375c;
+    text-align: center;
+    font-size: 5rem;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -1px;
+}
+
+.patient__separate {
+    margin-top: 18px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 136px;
+    height: 2px;
+    background: #2e80ce;
+}
+
+.patient__desc {
+    margin-top: 18px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 617px;
+    color: #575f66;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 1.75;
+}
+
+.patient__btn {
+    display: block;
+    margin-top: 38px;
+    width: 205px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 30px;
+}
+
+/* footer */
+
+.footer {
+    background: #10375c;
+    padding: 100px 0 42px;
+}
+
+.footer__content {
+    display: grid;
+    grid-template-columns: 414px 212px 212px 332px;
+}
+
+.footer__desc {
+    margin-top: 21px;
+    color: #a9b3bb;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.75;
+    width: 336px;
+}
+
+.footer__title {
+    color: #fff;
+    font-family: Open Sans;
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1.75;
+}
+
+.footer__list {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer__list--item a {
+    color: #a9b3bb;
+    font-family: Open Sans;
+    font-size: 1.4rem;
+    line-height: 1.85;
+}
+
+.footer__title:nth-of-type(2) {
+    margin-top: 28px;
+}
+
+.footer__list:nth-of-type(2) {
+    margin-top: 20px;
+}
+
+.footer__column:nth-of-type(2) .footer__list:nth-of-type(2) {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.footer__column:nth-of-type(4) .footer__desc {
+    margin-top: 20px;
+    width: 273px;
+    font-size: 1.4rem;
+    line-height: 1.85;
+}
+
+.footer__social-image {
+    margin-top: 20px;
+}
+
+.footer__action {
+    margin-top: 10px;
+    display: flex;
+}
+
+.footer__button {
+    width: 212px;
+    height: 46px;
+    border-radius: 4px;
+    border: 1px solid #406181;
+    background-color: transparent;
+    text-align: left;
+    color: #9ca8b1;
+    font-family: Open Sans;
+    font-size: 1.4rem;
+}
+
+.footer__action-btn {
+    margin-left: 12px;
+    width: 108px;
+    line-height: 46px;
+    border-radius: 4px;
+    color: #fff;
+    font-family: Open Sans;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.footer__separate {
+    margin-top: 28px;
+    width: 1170px;
+    height: 1px;
+    background: #406181;
+}
+
+.footer__sub-title {
+    margin-top: 28px;
+    color: #aab3ba;
+    text-align: center;
+    font-family: Open Sans;
+    font-size: 1.4rem;
+}
